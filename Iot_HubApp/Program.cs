@@ -17,6 +17,7 @@ namespace Iot_HubApp
         {
             DeviceServices.SendMessageAsync(deviceClient).GetAwaiter();
             DeviceServices.ReceiveMessageAsync(deviceClient).GetAwaiter();
+           
 
             Console.ReadKey();
 

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iot_HubApp", "Iot_HubApp\Iot_HubApp.csproj", "{DCF5A07E-8113-4EA5-98B2-8A234F04773F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iot_HubApp", "Iot_HubApp\Iot_HubApp.csproj", "{DCF5A07E-8113-4EA5-98B2-8A234F04773F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices", "SharedServices\SharedServices.csproj", "{D3A3B9BC-59CF-4E78-9BF7-863E62B7121B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedServices", "SharedServices\SharedServices.csproj", "{D3A3B9BC-59CF-4E78-9BF7-863E62B7121B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunction", "AzureFunction\AzureFunction.csproj", "{1A684972-8C70-4D17-BE06-CB0D0B1A7C7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D3A3B9BC-59CF-4E78-9BF7-863E62B7121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3A3B9BC-59CF-4E78-9BF7-863E62B7121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3A3B9BC-59CF-4E78-9BF7-863E62B7121B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A684972-8C70-4D17-BE06-CB0D0B1A7C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A684972-8C70-4D17-BE06-CB0D0B1A7C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A684972-8C70-4D17-BE06-CB0D0B1A7C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A684972-8C70-4D17-BE06-CB0D0B1A7C7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
