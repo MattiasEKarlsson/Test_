@@ -64,7 +64,7 @@ namespace SharedServices.Services
                     Console.WriteLine(exx.Message);
                 }
 
-                await Task.Delay(10 * 1000);
+                await Task.Delay(60 * 1000);
 
             }
 
