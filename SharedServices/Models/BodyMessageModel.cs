@@ -8,7 +8,5 @@ namespace SharedServices.Models
     {
         public string TargetDeviceId { get; set; }
         public string Message { get; set; }
-
-
     }
 }

@@ -23,20 +23,16 @@ namespace AzureFunction
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            
-
             string targetDeviceId = req.Query["targetdeviceid"];
             string message = req.Query["message"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-
 
             var data = JsonConvert.DeserializeObject<BodyMessageModel>(requestBody);
             targetDeviceId = targetDeviceId ?? data?.TargetDeviceId;
             message = message ?? data?.Message;
 
             await DeviceServices.SendMessageToDeviceAsync(serviceClient, targetDeviceId, message);
-            
 
             return new OkResult();
         }

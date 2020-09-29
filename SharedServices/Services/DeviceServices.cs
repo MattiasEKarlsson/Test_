@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using SharedServices.Models;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,14 +39,12 @@ namespace SharedServices.Services
                             Temerature = temp,
                             Humidity = humidity
                         };
-
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-
 
                 try
                 {
@@ -63,7 +60,6 @@ namespace SharedServices.Services
                 {
                     Console.WriteLine(exx.Message);
                 }
-
                 await Task.Delay(60 * 1000);
 
             }
@@ -84,23 +80,12 @@ namespace SharedServices.Services
                 Console.WriteLine($"Message recived {Encoding.UTF8.GetString(payload.GetBytes())}");
                 await deviceClient.CompleteAsync(payload);
             }
-
         }
 
         public static async Task SendMessageToDeviceAsync(MAD.ServiceClient serviceClient, string targetDeviceId, string message)
         {
             var payload = new MAD.Message(Encoding.UTF8.GetBytes(message));
             await serviceClient.SendAsync(targetDeviceId, payload);
-
-
-
         }
-
-
     }
-
-    
-
-   
-
 }
