@@ -28,13 +28,13 @@ namespace SharedServices.Services
 
                     if (httpResponseMessage.IsSuccessStatusCode)
                     {
-                        var content = httpResponseMessage.Content;                                    //Hämtar Api
+                        var content = httpResponseMessage.Content;                                    
                         var datatemp = await content.ReadAsAsync<Rootobject>();
 
-                        temp = datatemp.current.temp;                                                // Sätter Temp och Humidity
+                        temp = datatemp.current.temp;                                                
                         humidity = datatemp.current.humidity;
 
-                        senddata = new TemperatureModel                                              //Lägger Temp och Humidity i samma objekt.
+                        senddata = new TemperatureModel                                              
                         {
                             Temerature = temp,
                             Humidity = humidity
@@ -48,11 +48,11 @@ namespace SharedServices.Services
 
                 try
                 {
-                    var json = JsonConvert.SerializeObject(senddata);                                        // Converterar till Json format.
+                    var json = JsonConvert.SerializeObject(senddata);                                        
 
-                    var payload = new Message(Encoding.UTF8.GetBytes(json));                             // Packeterar meddelandena
+                    var payload = new Message(Encoding.UTF8.GetBytes(json));                             
 
-                    await deviceClient.SendEventAsync(payload);                                         // Skickar
+                    await deviceClient.SendEventAsync(payload);                                         
 
                     Console.WriteLine($"Message Sent: {json}");
                 }
@@ -60,7 +60,7 @@ namespace SharedServices.Services
                 {
                     Console.WriteLine(exx.Message);
                 }
-                await Task.Delay(60 * 1000);
+                await Task.Delay(3 * 1000);
 
             }
 
