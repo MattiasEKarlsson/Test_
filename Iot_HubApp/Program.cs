@@ -6,7 +6,7 @@ namespace Iot_HubApp
 {
     class Program
     {
-        private static readonly string _conn = "HostName=ec-win20iothub.azure-devices.net;DeviceId=consoleapp;SharedAccessKey=s5bq+AsW6yo+00GMDTgvNVWUUgNd+Mye35x/6wbktmo=";
+        private static readonly string _conn = "HostName=ec-win20iothub.azure-devices.net;DeviceId=DeviceApp;SharedAccessKey=sJGB59/d4EwPyNVxsX/VXWzxQoZkivpeYQUN+Bu7j+k=";
 
         private static readonly DeviceClient deviceClient =
             DeviceClient.CreateFromConnectionString(_conn, TransportType.Mqtt);
